@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20190527165705) do
     t.integer "calender_id"
     t.string "name"
     t.string "description"
-    t.integer "date"
+    t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

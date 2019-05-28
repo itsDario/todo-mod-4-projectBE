@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration[5.1]
       t.integer :calender_id
       t.string :name
       t.string :description
-      t.integer :date
+      t.string :date
 
       t.timestamps
     end
