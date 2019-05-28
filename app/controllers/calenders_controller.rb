@@ -7,7 +7,7 @@ class CalendersController < ApplicationController
   
     def create
       calName = params[:name]
-      nCal = Calendar.create(name: calName)
+      nCal = Calender.create(name: calName)
       render json: nCal
     end
   
