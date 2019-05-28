@@ -1,5 +1,3 @@
-require 'pry'
-
 class EventsController < ApplicationController
 
   def index
@@ -8,8 +6,10 @@ class EventsController < ApplicationController
   end
 
   def create
-    Event.create(user: params[:user], calender: params[:calender], date: params[:date])
-    binding.pry
+    user = User.find(1)
+    cal = Calender.find(1)
+    nEvent = Event.create(user: user, calender: cal, date: params[:date])
+    render json: nEvent
   end
 
   def destroy
