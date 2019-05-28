@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20190527165705) do
   create_table "events", force: :cascade do |t|
     t.integer "user_id"
     t.integer "calender_id"
+    t.string "name"
+    t.string "description"
     t.integer "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
