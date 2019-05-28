@@ -1,3 +1,3 @@
 class EventSerializer < ActiveModel::Serializer
-    attributes :id, :name
+  attributes :id, :user_id, :calender_id, :date
 end

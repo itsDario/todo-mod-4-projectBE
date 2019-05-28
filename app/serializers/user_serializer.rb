@@ -1,4 +1,5 @@
-class UserSerializer < ActiveModel::Serializer
-  attributes :username
-  has_many :events
+class TrainerSerializer < ActiveModel::Serializer
+  attributes :id, :name
+
+  has_many :pokemons
 end

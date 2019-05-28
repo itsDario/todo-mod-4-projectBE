@@ -1,19 +1,22 @@
+require 'faker'
+
 class EventsController < ApplicationController
 
+  def index
+    @events = Event.all
+    render json: @events
+  end
+
   def create
-    @shoe = Shoe.find_by(id: params[:shoe_id])
-    if @shoe
-      @review = Review.create(content: review_params[:content], shoe: @shoe)
-      render json: @review, status: 201
-    else
-      render json: {error: "Shoe not found"}, status: 404
-    end
+    # Event.create()
+  end
+
+  def destroy
+    # Event.destroy
   end
 
   private
-
-  def review_params
-    params.require(:review).permit(:content)
+  def pokemon_params
+    params.require(:pokemon).permit(:nickname, :species, :trainer_id)
   end
-
 end
