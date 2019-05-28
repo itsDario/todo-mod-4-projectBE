@@ -1,4 +1,4 @@
-require 'faker'
+require 'pry'
 
 class EventsController < ApplicationController
 
@@ -8,7 +8,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    # Event.create()
+    Event.create(user: params[:user], calender: params[:calender], date: params[:date])
+    binding.pry
   end
 
   def destroy
@@ -17,6 +18,6 @@ class EventsController < ApplicationController
 
   private
   def pokemon_params
-    params.require(:pokemon).permit(:nickname, :species, :trainer_id)
+    params.require(:event).permit(:calender_id, :date, :trainer_id)
   end
 end
