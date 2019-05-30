@@ -19,6 +19,6 @@ class EventsController < ApplicationController
 
   private
   def pokemon_params
-    params.require(:event).permit(:calender_id, :date, :trainer_id)
+    params.require(:event).permit(:calender_id, :date, :user_id, :name)
   end
 end

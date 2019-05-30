@@ -15,4 +15,3 @@ Calender.delete_all
 
 dario = User.create(name: 'Dario')
 cal = Calender.create(name: 'default')
-Event.create(name: 'hunting day', user: dario, calender: cal, date: 101010)
